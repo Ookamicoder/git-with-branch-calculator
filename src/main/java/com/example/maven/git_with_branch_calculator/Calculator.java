@@ -15,7 +15,15 @@ public class Calculator {
 	}
 	
 	public int divide(int firstNumber,int secondNumber) {
-		return firstNumber / secondNumber;
+		int result = 0;
+		try {
+			result =  firstNumber / secondNumber;
+		}catch(ArithmeticException e) {
+			e.getMessage();
+		}
+		
+		return result;
+		
 	}
 
 }

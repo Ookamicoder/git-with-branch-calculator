@@ -75,6 +75,19 @@ public class CalculatorTest {
 		}
 	}
 	
+	@Test
+	public void testSquare() {
+		Random random = new Random();
+		int number = 0;
+		int result = 0;
+		
+		for(int i = 0; i < 10; i++) {
+		number = random.nextInt(100);
+		result = number * number;
+		LOG.info("Testing the method square with: "+number+" and "+number);
+		assertEquals(calc.square(number),result);
+		}
+	}
 
 
 }

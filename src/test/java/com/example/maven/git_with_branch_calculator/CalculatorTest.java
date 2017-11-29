@@ -88,6 +88,20 @@ public class CalculatorTest {
 		assertEquals(calc.square(number),result);
 		}
 	}
+	
+	@Test
+	public void testCube() {
+		Random random = new Random();
+		int number = 0;
+		int result = 0;
+		
+		for(int i = 0; i < 10; i++) {
+		number = random.nextInt(100);
+		result = number * number * number;
+		LOG.info("Testing the method cube with: "+number+" , "+number+" and "+number);
+		assertEquals(calc.cube(number),result);
+		}
+	}
 
 
 }
